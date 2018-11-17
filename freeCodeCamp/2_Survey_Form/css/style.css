@@ -1,21 +1,28 @@
-h1 {
-    color: red;
-}
-
-
-
-.aukstis-100 {
-    min-height: 100px;
-}
-.aukstis-200 {
-    min-height: 200px;
-}
-.aukstis-300 {
-    min-height: 300px;
-}
-.aukstis-400 {
-    min-height: 400px;
-}
-.aukstis-500 {
-    min-height: 500px;
-}
+body {
+    text-align: center;
+    background-color: lightgrey;
+  }
+  
+  h1 {
+    color: green;
+  }
+  
+  p {
+    background-color: lightblue;
+    display: block;
+    padding: 5px;
+  }
+  
+  form {
+    text-align: left;
+    border-style: solid;
+    border-color: red green blue yellow;
+    display: inline-block;
+    padding: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .mt {
+    margin-top: 20px;
+  }

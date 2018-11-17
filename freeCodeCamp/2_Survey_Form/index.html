@@ -5,14 +5,69 @@
         <title></title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="libs/bootstrap4/css/bootstrap.css">
-        <!-- !!! mano CSS vissade zemiau -->
+        <!-- !!! mano CSS -->
         <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
 
-        <h1> Ziureti i console (inspect element)  </h1>
-
+        <h1 id="title">Event Registration Form</h1>
+        <p id="description">If you want to attend in the event, please fill in the form below.</p>
+        
+        <form id="survey-form" action="" autocomplete="on" class="mt">
+            
+            <div class="form-group">
+                <label for="name" id="name-label">Your Name *</label>
+                <input type="text" class="form-control"  id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">Your Email *</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="number" id="number-label">Your Age</label>
+                <input type="number" class="form-control" id="number" placeholder="Age" min="0" max="99">
+            </div>
+            
+            <div class="form-group mt">
+                <label for="number" id="number-label">How many people are you buying tickets for: </label><br>
+                <select name="tickets" id="dropdown">
+                    <option value="me">Just me</option>
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="more">4 or more</option>
+                </select>
+            </div>
+            
+            <div class="mt">
+                <label for="tshirt" id="number-label">Event T-shirt Choice: </label><br>
+                <input type="radio" name="tshirt" value="yes">Sure!<br>
+                <input type="radio" name="tshirt" value="no">No.
+            </div>
+            
+            <div class="mt">
+                <label>Do you have pets: </label><br>
+                <input type="radio" name="tshirt" value="yes">Yes!<br>
+                <input type="radio" name="tshirt" value="no">No.
+            </div>
+            
+            <div class="mt">
+                <label>Which pet do you bring: </label><br>
+                <input type="checkbox" name="dog" value="Dog"> Dog<br>
+                <input type="checkbox" name="cat" value="Cat"> Cat<br>
+                <input type="checkbox" name="bird" value="Bird"> Lizard<br>
+                <input type="checkbox" name="none" value="none"> None 
+            </div>
+            
+            <div class="mt">
+                <label>Additional comments: </label><br>
+                <textarea name="message" rows="5" cols="30"></textarea>
+            </div>
+            
+            <input type="submit" value="Submit" id="submit" class="mt">
+            
+        </form>
 
 
         <!-- Optional JavaScript -->
