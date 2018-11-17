@@ -1,21 +1,43 @@
-h1 {
-    color: red;
+#navbar {
+	height: 10vh;
 }
 
+.scrollspy {
+    position: relative;
+    height: 94.5vh;
+    margin-top: 5.5vh;
+    overflow: auto;
+}
 
+.more {
+	position: relative;
+	margin: auto;
+	border-radius: 50px;
+    border: 2px solid orange;
+    padding: 20px; 
+    width: 160px;
+    height: 145px; 
+	background-color: lightgray;
+}
 
-.aukstis-100 {
-    min-height: 100px;
+a:link {
+    text-decoration: none;
 }
-.aukstis-200 {
-    min-height: 200px;
+
+a:visited {
+    text-decoration: none;
 }
-.aukstis-300 {
-    min-height: 300px;
+
+a:hover {
+    text-decoration: none;
 }
-.aukstis-400 {
-    min-height: 400px;
+
+a:active {
+    text-decoration: underline;
 }
-.aukstis-500 {
-    min-height: 500px;
+
+@media screen and (max-width: 600px) {
+	.more {
+		background-color: white;
+	}
 }

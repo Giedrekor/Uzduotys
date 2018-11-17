@@ -11,7 +11,69 @@
     </head>
     <body>
 
-        <h1> Ziureti i console (inspect element)  </h1>
+        <navbar id="navbar" class="fixed-top">
+            <div class="nav bg-warning d-flex justify-content-around">
+                <a class="nav-link font-weight-bold active" href="#about">About</a>
+                <a class="nav-link font-weight-bold" href="#projects">Portfolio</a>
+                <a class="nav-link font-weight-bold" href="#more">More</a>
+            </div>
+        </navbar>
+                
+        <div data-spy="scroll" data-target="#navbar" data-offset="0" class="scrollspy">
+            <div id="about" class="jumbotron bg-secondary d-flex flex-column justify-content-center h-100">
+                <div id="welcome-section"> 
+                    <h1 class="display-4 text-center bg-info">I am Web Developer</h1>
+                    <p class="lead text-center bg-info">and this is my portfolio</p>
+                </div>
+            </div>
+                
+            <div id="projects" class="container bg-info pt-3">
+                <h3 class="text-center">My Portfolio</h3>
+                
+                <div class="row d-flex justify-content-center">
+                    <div class="card project-tile col-xs-11 col-md-5 m-3 pt-3 d-inline-block">
+                        <div class="card-header text-center">Product Landing Page</div>
+                        <div class="card-body">
+                            <img src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/2545540.MzyeaM.08c4c37d-1739-4598-aaab-3ac1b04045c7.png" alt="Screenshot of Pen" class="img-fluid">
+                            <p>For details<a href="https://codepen.io/giedrekor/full/MzyeaM/" class="card-link"> Click here</a>.</p>
+                        </div>
+                    </div>
+                
+                    <div class="card project-tile col-xs-11 col-md-5 m-3 pt-3 d-inline-block">
+                        <div class="card-header text-center">Technical Documentation Page</div>
+                        <div class="card-body">
+                            <img src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/2545540.MzjwXQ.c7df18e0-6803-4345-88a5-3c238c046d79.png" alt="Screenshot of Pen" class="img-fluid">
+                            <p>For details<a href="https://codepen.io/giedrekor/full/MzjwXQ/" class="card-link"> Click here</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="row d-flex justify-content-center">
+                    <div class="card project-tile col-xs-11 col-md-5 m-3 pt-3 d-inline-block">
+                        <div class="card-header text-center">Survey Form</div>
+                        <div class="card-body">
+                            <img src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/2545540.JeXYzr.572d84d8-dbef-46e5-bb61-4288be40c7ae.png" alt="Screenshot of Pen" class="img-fluid">
+                            <p>For details<a href="https://codepen.io/giedrekor/full/JeXYzr/" class="card-link"> Click here</a>.</p>
+                        </div>
+                    </div>
+            
+                    <div class="card project-tile col-xs-11 col-md-5 m-3 pt-3 d-inline-block">
+                        <div class="card-header text-center">Tribute Page</div>
+                        <div class="card-body">
+                            <img src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/2545540.jQOmOg.8287a325-9b92-48d4-867e-00116c2efd3f.png" alt="Screenshot of Pen" class="img-fluid">
+                            <p>For details<a href="https://codepen.io/giedrekor/full/jQOmOg/" class="card-link"> Click here</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+                
+            <div id="more" class="bg-secondary d-flex flex-column justify-content-center h-100">
+                <h3 class="text-center mt-3">More about me</h3>
+                <p class="text-center more"><a href="https://www.freecodecamp.org/giedrekor" target="_blank" id="profile-link">Click here, to visit my FreeCodeCamp public portfolio!</a></p>
+            </div>
+                
+        </div>
 
 
 
@@ -22,9 +84,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
-
-
-        <script type="text/javascript"  src="main.js">      </script>
 
     </body>
 </html>

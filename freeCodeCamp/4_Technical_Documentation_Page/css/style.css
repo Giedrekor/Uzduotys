@@ -1,21 +1,70 @@
-h1 {
-    color: red;
+body, html {
+	position: relative;
+	text-align: justify;
 }
 
+#navbar {
+	border: 3px solid grey;
+	background-color: lightgrey;
+}
 
+#main-doc {
+	position: absolute;
+}
 
-.aukstis-100 {
-    min-height: 100px;
+@media only screen and (min-width: 992px) {
+	#navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 30%;
+		border: 3px solid grey;
+		background-color: lightgrey;
+	}
+
+	#main-doc {
+		position: absolute;
+		left: 30%;
+		width: 70%;
+	}
 }
-.aukstis-200 {
-    min-height: 200px;
+
+#navbar a {
+	border-bottom: 2px solid grey;
 }
-.aukstis-300 {
-    min-height: 300px;
+
+#navbar a:first-of-type {
+	border-top: 2px solid grey;
 }
-.aukstis-400 {
-    min-height: 400px;
+
+a:link {
+   text-decoration: none;
+	color: black;
 }
-.aukstis-500 {
-    min-height: 500px;
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+code {
+	display: inline;
+   text-align: center;
+	color: darkblue;
+   position: relative;
+   word-break: normal;
+   word-wrap: normal;
+   line-height: 2;
+   background-color: lightgrey;
+   padding: 5px;
+   margin: 10px;
+   border-radius: 2px;
 }

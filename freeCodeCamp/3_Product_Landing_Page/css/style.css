@@ -1,21 +1,39 @@
-h1 {
-    color: red;
+body {
+	background-color: lightgrey;
+	height: 100vh;
 }
 
+#header {
+  height: 10vh;
+}
 
+li {
+  list-style: none;
+}
 
-.aukstis-100 {
-    min-height: 100px;
+@media (min-width: 601px) {    
+	ul {flex-direction: row;
+		display: flex;
+		margin: 3vh;
+		justify-content: space-around;
+	}
+		
+	#header-img {
+	  max-width: 20vh;		
+	}
 }
-.aukstis-200 {
-    min-height: 200px;
-}
-.aukstis-300 {
-    min-height: 300px;
-}
-.aukstis-400 {
-    min-height: 400px;
-}
-.aukstis-500 {
-    min-height: 500px;
+	
+ 	@media (max-width: 600px) {
+		ul {display: none;
+		} 	
+		#header-img {
+		  max-width: 20vh;
+		}
+	}
+
+.rel { 
+	position: relative;
+    height: 85vh;
+	margin-top: 5vh;
+    overflow: auto;
 }
