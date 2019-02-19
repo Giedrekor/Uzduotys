@@ -11,3 +11,5 @@ Dešinėje realizuota galimybė įvesti naują ar ištrinti esamą rezervaciją 
 Antrajame puslapyje pateiktas rezervacijų sąrašas tik su informacija apie rezervuotas datas ir laikus. Dešiniau - "Pridėti" ir "Ištrinti" mygtukai, kuriais naudojantis klientai gali kurti ir trinti savo rezervacijas. Klientų puslapyje matomos ikonos, ant kurių paspaudus būsite nukreipti į kirpyklos socialinių paskyrų puslapius.
 
 Sistema pritaikyta naudotis planšetiniais kompiuteriais ir didesnius ekranus turinčiais įrenginiais.
+
+Internete galimarasti adresu: https://giedreskirpykla.000webhostapp.com/
