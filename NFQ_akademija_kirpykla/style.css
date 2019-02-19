@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif, Helvetica;
+    height: 100vh;
+    width: 100wh;
+    background-color: grey;
+}
+
+#rezervacijos {
+    width: auto;
+    height: 72vh;
+    border: 1px solid sandybrown;
+    overflow-y: scroll;
+}
+
+#rezervacijosKlientams {
+    max-height: 65vh;
+    border: 1px solid sandybrown;
+    overflow-y: scroll;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.8;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.kontaktai {
+    position: absolute;
+    bottom: 10px;
+}

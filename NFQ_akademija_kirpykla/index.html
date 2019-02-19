@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kirpykla</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link href="https://unpkg.com/bootstrap-table@1.13.4/dist/bootstrap-table.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <!-- Puslapis kirpejoms -->
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <!-- Sarasas/lentele -->
+            <div class="col-xs-12 col-md-10 bg-light">
+                <h2 class="text-center my-3 text-secondary text-uppercase font-weight-bold">Rezervacijos kirpykloje</h2>
+                <div class="mb-2">
+                    <p>Įveskite ieškomą <strong>datą</strong>:</p>
+                    <input type="text" id="myInput" placeholder="MMMM-mm-dd" onkeyup="myFunction()" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" />
+                </div>
+
+                <div id="rezervacijos"></div>
+            </div>
+            <div class="col-xs-12 col-md-2 bg-warning py-5">
+                <h6 class="my-2 mt-5">Rezervacijos įvedimas:</h6>
+                <button type="button" class="btn btn-lg btn-secondary" data-toggle="modal" data-target="#newRecord">Pridėti</button>
+                <h6 class="my-2">Rezervacijos atšaukimas:</h6>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#deleteRecord">Ištrinti</button>
+
+                <!-- Nauja rezervacija -->
+                <div class="modal fade" id="newRecord" method="post" tabindex="1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Nauja rezervacija</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form id="postData" autocomplete="on">
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label>Kirpėjos vardas:</label>
+                                        <select id="kirpeja" class="custom-select" name="kirpeja">
+                                            <option selected value="kirpejaA">Kirpėja "vardasA"</option>
+                                            <option value="kirpejaB">Kirpėja "vardasB"</option>
+                                            <option value="kirpejaC">Kirpėja "vardasC"</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Jūsų vardas:</label>
+                                        <input id="klientas" class="form-control" type="text" name="klientas" value=""
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Kontaktinis tel. (pvz. 8600 00000)</label>
+                                        <input id="tel" class="form-control" type="number" name="tel" value="" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Data ir laikas</label>
+                                        <input id="laikas" type="text" class="form-control" name="laikas" autocomplete="off"
+                                            required>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Uždaryti</button>
+                                        <button type="submit" id="close" class="btn btn-primary">Rezervuoti</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trinti rezervacija -->
+            <div class="modal fade" id="deleteRecord" method="delete" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Trinti rezervaciją</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form id="deleteData" autocomplete="on">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Kliento vardas:</label>
+                                    <input id="klientas" class="form-control" type="text" name="klientas" value=""
+                                        required>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Uždaryti</button>
+                                    <button type="submit" id="close" class="btn btn-primary">Trinti</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Puslapis klientams -->
+    <div class="container h-100 p-4">
+        <div class="row h-100">
+            <div class="col-8 bg-light h-100 w-50">
+                <h2 class="text-center my-3  text-secondary text-uppercase font-weight-bold">Rezervacijos kirpykloje</h2>
+                <div class="mb-2">
+                    <p>Įveskite ieškomą <strong>datą</strong>:</p>
+                    <input type="text" id="myInputK" placeholder="MMMM-mm-dd" onkeyup="myFunctionK()" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" />
+                </div>
+                <div id="rezervacijosKlientams" class="text-center"></div>
+            </div>
+            <div class="col bg-warning h-100 p-5">
+                <h6 class="my-2 mt-5">Rezervuokite laiką:</h6>
+                <button type="button" class="btn btn-lg btn-secondary" data-toggle="modal" data-target="#newRecord">Pridėti</button>
+                <h6 class="mt-5">Rezervacijos atšaukimas:</h6>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#deleteRecord">Ištrinti</button>
+                <div class="kontaktai d-md-inline-block">
+                    <h6>Mus rasite:</h6>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.13.4/dist/bootstrap-table.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js"></script>
+
+    <script type="text/javascript" src="app.js"> </script>
+
+</body>
+
+</html>

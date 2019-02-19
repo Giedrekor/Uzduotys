@@ -1,0 +1,71 @@
+﻿[{
+		"kirpeja": "kirpejaA",
+		"klientas": "vardas1",
+		"telefonas": "860000000",
+		"start": "2019-02-21 10:00"
+	},
+	{
+		"kirpeja": "kirpejaB",
+		"klientas": "vardas2",
+		"telefonas": "860000001",
+		"start": "2019-02-25 17:00"
+	},
+	{
+		"kirpeja": "kirpejaC",
+		"klientas": "vardas3",
+		"telefonas": "860000002",
+		"start": "2019-02-21 14:30"
+	},
+
+	{
+		"kirpeja": "kirpejaA",
+		"klientas": "vardas4",
+		"telefonas": "860000018",
+		"start": "2019-02-22 14:00"
+	},
+	{
+		"kirpeja": "kirpejaB",
+		"klientas": "vardas5",
+		"telefonas": "860000014",
+		"start": "2019-02-23 17:30"
+	},
+	{
+		"kirpeja": "kirpejaB",
+		"klientas": "vardas6",
+		"telefonas": "860000020",
+		"start": "2019-02-24 14:00"
+	},
+	{
+		"kirpeja": "kirpejaA",
+		"klientas": "vardas7",
+		"telefonas": "860000015",
+		"start": "2019-02-24 10:00"
+	}, {
+		"kirpeja": "kirpejaA",
+		"klientas": "vardas8",
+		"telefonas": "860000008",
+		"start": "2019-02-25 17:00"
+	}, {
+		"kirpeja": "kirpejaC",
+		"klientas": "vardas9",
+		"telefonas": "860000006",
+		"start": "2019-02-21 14:30"
+	},
+	{
+		"kirpeja": "kirpejaA",
+		"klientas": "vardas10",
+		"telefonas": "860000007",
+		"start": "2019-02-22 14:00"
+	}, {
+		"kirpeja": "kirpejaB",
+		"klientas": "vardas11",
+		"telefonas": "860000010",
+		"start": "2019-02-26 17:30"
+	}, {
+		"kirpeja": "kirpejaB",
+		"klientas": "vardas12",
+		"telefonas": "860000002",
+		"start": "2019-03-01 14:00"
+	}
+
+]
